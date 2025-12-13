@@ -1,0 +1,27 @@
+button {
+  width: 6rem;
+  height: 6rem;
+
+  max-width: 30vh;
+  max-height: 30vh;
+
+  border: none;
+  border-radius: 2rem;
+  background: linear-gradient(
+    144deg,
+    rgba(42, 123, 155, 1) 0%,
+    rgba(87, 199, 133, 1) 60%
+  );
+
+  cursor: pointer;
+
+  font-size: 2rem;
+}
+
+button:hover {
+  background: linear-gradient(
+    154deg,
+    rgba(42, 123, 155, 1) 0%,
+    rgba(87, 199, 133, 1) 60%
+  );
+}

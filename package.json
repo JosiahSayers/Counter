@@ -1,0 +1,22 @@
+{
+  "name": "counter",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bun --hot src/index.ts",
+    "build": "bun build ./src/index.html --outdir=dist --sourcemap --target=browser --minify --define:process.env.NODE_ENV='\"production\"' --env='BUN_PUBLIC_*'",
+    "start": "NODE_ENV=production bun src/index.ts",
+    "publish": "docker buildx build --push --platform linux/amd64 -t josiahsayers15/counter:latest -t josiahsayers15/counter:$npm_package_version ."
+  },
+  "dependencies": {
+    "axios-hooks": "^5.1.1",
+    "react": "^19",
+    "react-dom": "^19"
+  },
+  "devDependencies": {
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/bun": "latest"
+  }
+}

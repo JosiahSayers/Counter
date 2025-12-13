@@ -1,0 +1,12 @@
+body {
+  background: rgba(42, 123, 155, 0.2);
+}
+
+div.app {
+  width: 99vw;
+  height: 99vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
