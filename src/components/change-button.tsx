@@ -1,6 +1,4 @@
-import { CountContext } from "@/CountContext";
 import useAxios from "axios-hooks";
-import { useContext, useEffect, useState } from "react";
 import "./change-button.css";
 import { Spinner } from "./spinner";
 
@@ -14,17 +12,10 @@ const icons: Record<Props["method"], string> = {
 };
 
 export function ChangeButton({ method }: Props) {
-  const [{ data, loading }, execute] = useAxios<{ count: number }>(
+  const [{ loading }, execute] = useAxios<{ count: number }>(
     { url: `/api/${method}`, method: "POST" },
     { manual: true }
   );
-  const { setCount } = useContext(CountContext);
-
-  useEffect(() => {
-    if (data?.count !== undefined) {
-      setCount(data.count);
-    }
-  }, [data]);
 
   return (
     <button onClick={() => execute()} disabled={loading}>

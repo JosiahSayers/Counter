@@ -16,6 +16,7 @@ button {
   cursor: pointer;
 
   font-size: 2rem;
+  color: black;
 }
 
 button:hover {
@@ -24,4 +25,6 @@ button:hover {
     rgba(42, 123, 155, 1) 0%,
     rgba(87, 199, 133, 1) 60%
   );
+
+  color: black;
 }
